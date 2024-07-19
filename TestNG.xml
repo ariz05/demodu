@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="GUI Tests">
+
+    <listeners>
+        <listener class-name="com.dm.ui.automation.utilities.ReportListener"/>
+    </listeners>
+    <test name="Automated GUI tests for NY times website">
+        <classes>
+            <class name="com.dm.ui.automation.testcases.HomePageTest"/>
+<!--            <class name="com.dm.ui.automation.testcases.LoginTest"/>-->
+        </classes>
+    </test>
+
+</suite>
