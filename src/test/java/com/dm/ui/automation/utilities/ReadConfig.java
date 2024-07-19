@@ -24,6 +24,7 @@ public class ReadConfig {
         }
 
         envConfigMap = getEnvConfigMap();
+        System.out.println(envConfigMap);
     }
 
     //method to get website url either from config property file or environment variables retrieved.
