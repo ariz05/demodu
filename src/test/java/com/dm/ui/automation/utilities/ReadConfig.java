@@ -24,24 +24,23 @@ public class ReadConfig {
         }
 
         envConfigMap = getEnvConfigMap();
-        System.out.println(envConfigMap);
     }
 
     //method to get website url either from config property file or environment variables retrieved.
     public String getApplicationURL() {
-        if (String.valueOf(envConfigMap.get("baseURL")).equalsIgnoreCase("") || String.valueOf(envConfigMap.get("baseURL")) == "null") {
-            return pro.getProperty("baseURL");
+        if (String.valueOf(envConfigMap.get("BASEURL")).equalsIgnoreCase("") || String.valueOf(envConfigMap.get("BASEURL")) == "null") {
+            return pro.getProperty("BASEURL");
         }
-        return String.valueOf(envConfigMap.get("baseURL"));
+        return String.valueOf(envConfigMap.get("BASEURL"));
     }
 
     //method to get browser name either from config property file or environment variables retrieved.
     public String getBrowserName() {
-        if (String.valueOf(envConfigMap.get("browserName")).equalsIgnoreCase("") || String.valueOf(envConfigMap.get("browserName")) == "null") {
-            return pro.getProperty("browserName");
+        if (String.valueOf(envConfigMap.get("BROWSERNAME")).equalsIgnoreCase("") || String.valueOf(envConfigMap.get("BROWSERNAME")) == "null") {
+            return pro.getProperty("BROWSERNAME");
         }
 
-        return String.valueOf(envConfigMap.get("browserName"));
+        return String.valueOf(envConfigMap.get("BROWSERNAME"));
     }
 
     //method to retrieve environment variables from maven command line arguments and store them in hashmap.
